@@ -37,27 +37,25 @@ void setup() {
 }
 
 void loop() {
-  
-
-
-  if (WiFi.status() == WL_CONNECTED) {
-     if (Firebase.getBool(firebaseData, "/Estado/Prendido")) //Obtenemos el estado de nuestro booleano en firebase {
-      if(firebaseData.boolData() == 0)
-      {
-        
-        digitalWrite(rele, HIGH);
-        Serial.println("Apagar");
-      }
-      else {
-        
-        digitalWrite(rele, LOW);
-        Serial.println("Prender");
-      }
-    
-
-  } else {
-    Serial.println(firebaseData.errorReason());
-  }
+  if (WiFi.status() == WL_CONNECTED) 
+  {
+     if (Firebase.getBool(firebaseData, "/Estado/Prendido")) //Obtenemos el estado de nuestro booleano en firebase
+     {
+        if(firebaseData.boolData() == 0)
+        {
+          digitalWrite(rele, HIGH);
+          Serial.println("Apagar");
+        }
+        else 
+        {        
+          digitalWrite(rele, LOW);
+          Serial.println("Prender");
+        }
+     } 
+     else 
+     {
+      Serial.println(firebaseData.errorReason());
+     }
   }
   // Delay
   delay(5000);
