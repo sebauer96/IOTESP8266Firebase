@@ -11,19 +11,13 @@ WiFiServer server(80);
 void setup() {
   Serial.begin(9600);
   delay(10);
-
   //Configuración  del GPIO14
   pinMode(rele, OUTPUT);
-
-  
-  
   Serial.println();
   Serial.println();
   Serial.print("Conectandose a red : ");
-  Serial.println(ssid);
-  
+  Serial.println(ssid);  
   WiFi.begin(ssid, password); //Conexión a la red
-  
   while (WiFi.status() != WL_CONNECTED) //Chequea si ya se conectó al wifi
   {
     delay(500);
@@ -31,7 +25,6 @@ void setup() {
   }
   Serial.println("");
   Serial.println("WiFi conectado");
-
   Firebase.begin("yout_project_id.firebaseio.com", "your_Firebase_database_secret");
   
 }
