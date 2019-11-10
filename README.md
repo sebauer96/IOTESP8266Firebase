@@ -11,7 +11,7 @@ Lamp
 Power supply 3.3v
 
 ## Requirements Software
-Arduino IDE
-Install Plugin ESP8266 for Arduino IDE
-Install ESP8266WiFi Library on Arduino IDE
-Install FirebaseESP8266 Library on Arduino IDE
+- Arduino IDE
+- Install Plugin ESP8266 for Arduino IDE
+- Install ESP8266WiFi Library on Arduino IDE
+- Install FirebaseESP8266 Library on Arduino IDE
