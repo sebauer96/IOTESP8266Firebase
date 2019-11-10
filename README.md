@@ -15,3 +15,4 @@ https://fritzing.org/projects/iot-esp8266-nodemcu-power-lamp
 - Install Plugin ESP8266 for Arduino IDE
 - Install ESP8266WiFi Library on Arduino IDE
 - Install FirebaseESP8266 Library on Arduino IDE
+- Create RealTime DB on Firebase
